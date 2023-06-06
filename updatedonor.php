@@ -1,10 +1,6 @@
 <?php
 
 require_once "config.php";
-if(!mysqli_select_db($link, 'blood_donation_project')){
-    echo 'Database is not connected';
-}
-
 // Get the form data
 $name = $_POST['name'];
 $email = $_POST['email'];

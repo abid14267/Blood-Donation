@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="cover-image" style="  background:url('./image/login.jpg');background-size: 100%; ">
+    <div class="cover-image" style="  background:url('./image/login1.jpg');background-size: 100%; ">
         <!-- <img class="cover-photo" src="./img/Blogin.jpg" alt=""> -->
         <div class="row min-vh-100 justify-content-center align-items-center">
             <div class="col-lg-5">
