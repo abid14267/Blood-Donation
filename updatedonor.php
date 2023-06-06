@@ -1,7 +1,7 @@
 <?php
 
 require_once "config.php";
-if(!mysqli_select_db($conn, 'blood_donation_project')){
+if(!mysqli_select_db($link, 'blood_donation_project')){
     echo 'Database is not connected';
 }
 
@@ -15,12 +15,12 @@ $state = $_POST['state'];
 
 $sql = "UPDATE donars SET name='$name', email='$email', phone='$phone', blood_group='$bloodGroup', city='$city', state='$state' WHERE email='$email'";
 
-if ($conn->query($sql) === TRUE) {
+if ($link->query($sql) === TRUE) {
  
   header("Location: updatedonor.html"); 
 } else {
-  echo 'Error updating donor information: ' . $conn->error;
+  echo 'Error updating donor information: ' . $link->error;
 }
 
-$conn->close();
+$link->close();
 ?>

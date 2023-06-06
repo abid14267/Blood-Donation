@@ -11,15 +11,15 @@ $comments =$_POST["comments"];
 $sql = "INSERT INTO comment (name, email, comments)
         VALUES ('$name', '$email', '$comments')";
 
-if ($conn->query($sql) === TRUE) {
+if ($link->query($sql) === TRUE) {
 //    echo "<script> swal('Good job!, Donor Information Update!, successfully'); </script>";
 
 header("Location: aboutus.html"); 
 
 } 
-else { echo "Error: " . $sql . "<br>" . $conn->error;
+else { echo "Error: " . $sql . "<br>" . $link->error;
     }
 
-    $conn->close();
+    $link->close();
 
     ?>

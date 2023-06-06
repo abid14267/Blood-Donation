@@ -10,7 +10,7 @@
 
     // Construct SQL query
     $sql = "SELECT * FROM donars WHERE blood_group='$blood_group' AND city='$city' AND state='$state'";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($link, $sql);
 
     // Check if any results were found
     if (mysqli_num_rows($result) > 0) {
@@ -27,6 +27,6 @@
     }
 
     // Close connection
-    mysqli_close($conn);
+    mysqli_close($link);
   }
 ?>

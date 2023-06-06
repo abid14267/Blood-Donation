@@ -13,16 +13,16 @@ $state = $_POST["state"];
 $sql = "INSERT INTO donars (name, email, phone, blood_group, city, state)
         VALUES ('$name', '$email', '$phone', '$blood_group', '$city', '$state')";
 
-if ($conn->query($sql) === TRUE) {
+if ($link->query($sql) === TRUE) {
   
 header("Location: donar.html"); 
 
 } 
 
 
-else { echo "Error: " . $sql . "<br>" . $conn->error;
+else { echo "Error: " . $sql . "<br>" . $link->error;
     }
 
-    $conn->close();
+    $link->close();
 
     ?>
