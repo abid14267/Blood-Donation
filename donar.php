@@ -1,16 +1,6 @@
 <?php
 // Establish database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "blood_donation_project";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+require_once "./config.php";
 // Get form data
 $name = $_POST["name"];
 $email = $_POST["email"];

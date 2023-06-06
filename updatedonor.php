@@ -1,9 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '');
-if(!$conn){
-    echo 'Not Conneted';
-}
+require_once "./config.php";
 if(!mysqli_select_db($conn, 'blood_donation_project')){
     echo 'Database is not connected';
 }

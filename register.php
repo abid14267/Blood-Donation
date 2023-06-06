@@ -1,17 +1,7 @@
 <?php
 # Include connection
  // Connect to database
- $host = 'localhost';
- $user = 'root';
- $password = '';
- $database = 'blood_donation_project';
- $link = mysqli_connect($host, $user, $password, $database);
-
- // Check connection
- if (!$link) {
-   die('Connection failed: ' . mysqli_connect_error());
- }
-
+ require_once "./config.php";
 # Define variables and initialize with empty values
 $username_err = $email_err = $password_err = "";
 $username = $email = $password = "";

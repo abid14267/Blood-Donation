@@ -6,16 +6,7 @@
     $state = $_POST['state'];
 
     // Connect to database
-    $host = 'localhost';
-    $user = 'root';
-    $password = '';
-    $database = 'blood_donation_project';
-    $conn = mysqli_connect($host, $user, $password, $database);
-
-    // Check connection
-    if (!$conn) {
-      die('Connection failed: ' . mysqli_connect_error());
-    }
+    require_once "./config.php";
 
     // Construct SQL query
     $sql = "SELECT * FROM donars WHERE blood_group='$blood_group' AND city='$city' AND state='$state'";
