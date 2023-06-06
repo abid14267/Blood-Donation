@@ -1,6 +1,6 @@
 <?php
 // Establish database connection
-require_once "./config.php";
+require_once "config.php";
 // Get form data
 $name = $_POST["name"];
 $email = $_POST["email"];

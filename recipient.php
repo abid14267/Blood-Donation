@@ -24,7 +24,7 @@
 //    $pincode = $_POST['pincode'];
 
     // Connect to database
-    require_once "./config.php";
+    require_once "config.php";
 
     // Construct SQL query
     $sql = "SELECT * FROM donars WHERE blood_group='$blood_group' AND city='$city' AND state='$state'";
